@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: YincanaImageLibrary
+  m_EditorClassIdentifier: Unity.XR.ARSubsystems::UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
+  m_GuidLow: 5154249265586328389
+  m_GuidHigh: 67035340565132180
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4734408221022612354
+      m_GuidHigh: 1275980771459815103
+    m_SerializedTextureGuid:
+      m_GuidLow: 2374801530820884159
+      m_GuidHigh: 12062639249298089579
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: ALFA
+    m_Texture: {fileID: 2800000, guid: f8a1f6bffd6820f46be618947c1a67a7, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5020994489202819703
+      m_GuidHigh: 11040232661083056291
+    m_SerializedTextureGuid:
+      m_GuidLow: 16079242686766096962
+      m_GuidHigh: 11443249970424920586
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: BRAVO
+    m_Texture: {fileID: 2800000, guid: 39fda242f208df240a3a2d1b3897ce9e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4769689293255762128
+      m_GuidHigh: 1172475479865163398
+    m_SerializedTextureGuid:
+      m_GuidLow: 11192653159421433960
+      m_GuidHigh: 14136907313287794923
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: CHARLIE
+    m_Texture: {fileID: 2800000, guid: 4d77d8684abf9b54eb1024074d6230c4, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5460959662044760372
+      m_GuidHigh: 16024107445670977451
+    m_SerializedTextureGuid:
+      m_GuidLow: 4446186613856427262
+      m_GuidHigh: 18339723435921201467
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: DELTA
+    m_Texture: {fileID: 2800000, guid: 1c025cfe072b3db43b59fd044cc983fe, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4752703195054472609
+      m_GuidHigh: 1260215979553742503
+    m_SerializedTextureGuid:
+      m_GuidLow: 14403708850037879068
+      m_GuidHigh: 4783340597180954586
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: ECHO
+    m_Texture: {fileID: 2800000, guid: 8ea8711c40e2c7e4daf7ac0eeed66142, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5637174100382815923
+      m_GuidHigh: 11856976909021315712
+    m_SerializedTextureGuid:
+      m_GuidLow: 14363105683339847047
+      m_GuidHigh: 400393481802994585
+    m_Size: {x: 0.085, y: 0.12022631}
+    m_SpecifySize: 1
+    m_Name: FOXTROT
+    m_Texture: {fileID: 2800000, guid: 1edda5870085c75499d33f15c07b8e05, type: 3}
