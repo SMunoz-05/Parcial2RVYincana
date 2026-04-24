@@ -47,28 +47,27 @@ public class UserManager : MonoBehaviour
 
     public void OnClickStart()
     {
-        Debug.Log("Entrando a OnClickStart");
-
         string username = nameInput.text.Trim();
         string email = emailInput.text.Trim();
 
-        Debug.Log("Usuario: " + username);
-        Debug.Log("Email: " + email);
-        Debug.Log("Faccion: " + selectedFaction);
-
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email))
-        { ShowError("ERROR: Credenciales incompletas."); Debug.Log("Falló: campos vacíos"); return; }
+        { ShowError("ERROR: Credenciales incompletas."); return; }
 
         if (!IsValidEmail(email))
-        { ShowError("ERROR: Email no válido."); Debug.Log("Falló: email inválido"); return; }
+        { ShowError("ERROR: Enlace de comunicacion no valido."); return; }
 
         if (string.IsNullOrEmpty(selectedFaction))
-        { ShowError("ERROR: Elige una facción."); Debug.Log("Falló: sin facción"); return; }
+        { ShowError("ERROR: Debes elegir una faccion."); return; }
 
-        Debug.Log("Cambiando panel...");
+        PlayerPrefs.SetString("UserName", username);
+        PlayerPrefs.SetString("UserEmail", email);
+        PlayerPrefs.SetString("UserFaction", selectedFaction);
+        PlayerPrefs.SetInt("CurrentMission", 1);
+        PlayerPrefs.SetInt("TotalPoints", 0);
+        PlayerPrefs.Save();
+
         panelLogin.SetActive(false);
         panelTutorial.SetActive(true);
-        Debug.Log("Listo");
     }
 
     private bool IsValidEmail(string email)
