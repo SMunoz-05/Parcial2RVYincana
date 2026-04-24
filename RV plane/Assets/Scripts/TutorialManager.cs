@@ -99,7 +99,7 @@ public class TutorialManager : MonoBehaviour
 
     void UpdateUI()
     {
-        buttonText.text = (currentStep == steps.Length - 1) ? "¡COMENZAR!" : "SIGUIENTE";
+        buttonText.text = (currentStep == steps.Length - 1) ? "¡comenzar!" : "siguiente";
     }
 
     void FinishTutorial()
