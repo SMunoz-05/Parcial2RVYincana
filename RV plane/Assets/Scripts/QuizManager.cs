@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class QuizManager : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class QuizManager : MonoBehaviour
 
     [Header("Base de Datos")]
     public QuizData[] bancoPreguntas;
+    private List<QuizData> preguntasDeEstaTarjeta = new List<QuizData>();
     private QuizData preguntaActual;
+    private int indicePreguntaLocal = 0;
 
     [Header("UI del Quiz")]
     public GameObject panelQuiz;
@@ -16,16 +19,15 @@ public class QuizManager : MonoBehaviour
     public Button[] botonesOpciones;
     public TextMeshProUGUI textoPuntos;
 
+    [Header("Progreso Global")]
     private int puntosTotales = 0;
-
-    [Header("Progreso")]
     public int tarjetasCompletadas = 0;
     public int totalTarjetas = 6;
-    public GameObject botonFinalizar; // El botón que llevará al Ranking
+    public GameObject botonFinalizar;
 
     [Header("Referencias de Flujo")]
-    public GameObject panelHUD_AR; // Arrastra el HUD aquí
-    public GameObject panelTutorial; // Arrastra el Panel de Pasos aquí
+    public GameObject panelHUD_AR;
+    public GameObject panelTutorial;
 
     void Awake()
     {
@@ -36,72 +38,100 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
         if (botonFinalizar != null) botonFinalizar.SetActive(false);
+        ActualizarPuntosUI();
     }
 
-    // Esta función la llamaremos desde el MultiImageTracker
+    // Se activa desde el MultiImageTracker cuando detecta una imagen
     public void ActivarQuiz(string idTarjeta)
     {
+        // 1. Limpiamos la lista local y buscamos todas las preguntas de esa tarjeta
+        preguntasDeEstaTarjeta.Clear();
+        indicePreguntaLocal = 0;
+
         foreach (QuizData q in bancoPreguntas)
         {
             if (q.idTarjeta == idTarjeta)
             {
-                preguntaActual = q;
-                MostrarPregunta();
-                break;
+                preguntasDeEstaTarjeta.Add(q);
             }
+        }
+
+        // 2. Si encontramos preguntas, lanzamos la primera
+        if (preguntasDeEstaTarjeta.Count > 0)
+        {
+            MostrarSiguientePregunta();
         }
     }
 
-    void MostrarPregunta()
+    void MostrarSiguientePregunta()
     {
+        preguntaActual = preguntasDeEstaTarjeta[indicePreguntaLocal];
         panelQuiz.SetActive(true);
         textoPregunta.text = preguntaActual.pregunta;
 
         for (int i = 0; i < botonesOpciones.Length; i++)
         {
-            botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>().text = preguntaActual.opciones[i];
+            // Verificamos que la pregunta tenga suficientes opciones para los botones
+            if (i < preguntaActual.opciones.Length)
+            {
+                botonesOpciones[i].gameObject.SetActive(true);
+                botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>().text = preguntaActual.opciones[i];
 
-            int index = i; // Necesario para el Listener
-            botonesOpciones[i].onClick.RemoveAllListeners();
-            botonesOpciones[i].onClick.AddListener(() => Responder(index));
+                int index = i;
+                botonesOpciones[i].onClick.RemoveAllListeners();
+                botonesOpciones[i].onClick.AddListener(() => Responder(index));
+            }
+            else
+            {
+                botonesOpciones[i].gameObject.SetActive(false); // Escondemos botones si sobran
+            }
         }
     }
 
     void Responder(int indiceSeleccionado)
     {
+        // 1. Validar respuesta
         if (indiceSeleccionado == preguntaActual.respuestaCorrectaIndex)
         {
             puntosTotales += 100;
             ActualizarPuntosUI();
         }
 
-        panelQuiz.SetActive(false);
-        tarjetasCompletadas++;
+        // 2. Pasar a la siguiente pregunta de la MISMA tarjeta
+        indicePreguntaLocal++;
 
-        // Verificar si ya terminó la Yincana
-        if (tarjetasCompletadas >= totalTarjetas)
+        if (indicePreguntaLocal < preguntasDeEstaTarjeta.Count)
         {
-            FinalizarJuego();
+            MostrarSiguientePregunta();
+        }
+        else
+        {
+            // Ya no hay más preguntas para ESTA tarjeta
+            panelQuiz.SetActive(false);
+            tarjetasCompletadas++;
+
+            if (tarjetasCompletadas >= totalTarjetas)
+            {
+                FinalizarJuego();
+            }
         }
     }
+
     void FinalizarJuego()
     {
-        // 1. Apagamos el tutorial
         if (panelTutorial != null) panelTutorial.SetActive(false);
-
-        // 2. Encendemos el HUD de Realidad Aumentada
         if (panelHUD_AR != null) panelHUD_AR.SetActive(true);
-
-        // 3. Mostramos el botón de Ranking
         if (botonFinalizar != null) botonFinalizar.SetActive(true);
 
-        Debug.Log("Yincana Finalizada. HUD activado.");
+        Debug.Log("¡Yincana Terminada! Todas las tarjetas completadas.");
     }
+
     void ActualizarPuntosUI()
     {
-        textoPuntos.text = "Puntos: " + puntosTotales;
+        if (textoPuntos != null) textoPuntos.text = "Puntos: " + puntosTotales;
         PlayerPrefs.SetInt("TotalPoints", puntosTotales);
     }
+
     public void IrAlRanking()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Escena_Ranking");

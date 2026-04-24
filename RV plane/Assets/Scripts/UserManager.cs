@@ -1,78 +1,94 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Text.RegularExpressions; // Para validar el email
+using System.Text.RegularExpressions;
 
 public class UserManager : MonoBehaviour
 {
-    [Header("UI References")]
+    // Header UI References
     public TMP_InputField nameInput;
     public TMP_InputField emailInput;
-    public TMP_Dropdown factionDropdown;
     public Button startButton;
-    public TextMeshProUGUI errorText; // Un texto pequeño en rojo para avisos
+    public TextMeshProUGUI errorText;
 
-    [Header("Panels")]
+    // Botones de facción
+    public Button btnResistencia;
+    public Button btnImperio;
+    private string selectedFaction = ""; // guarda cuál eligió
+
+    // Panels
     public GameObject panelLogin;
     public GameObject panelTutorial;
 
     void Start()
     {
-        errorText.text = ""; // Limpiar errores al iniciar
-        // Recuperar si ya existía un usuario (Opcional para agilidad)
+        errorText.text = "";
+
         if (PlayerPrefs.HasKey("UserName"))
-        {
             nameInput.text = PlayerPrefs.GetString("UserName");
-        }
+
+        // Asignar listeners a los botones de facción
+        btnResistencia.onClick.AddListener(() => SelectFaction("Resistencia"));
+        btnImperio.onClick.AddListener(() => SelectFaction("Imperio"));
+    }
+
+    public void SelectFaction(string faction)
+    {
+        selectedFaction = faction;
+        errorText.text = ""; // limpiar error si había
+                             // Resaltar botón seleccionado visualmente
+        ColorBlock on = btnResistencia.colors;
+        on.normalColor = new Color(1f, 0.9f, 0.2f, 1f); // dorado
+        ColorBlock off = btnResistencia.colors;
+        off.normalColor = Color.white;
+        btnResistencia.colors = (faction == "Resistencia") ? on : off;
+        btnImperio.colors = (faction == "Imperio") ? on : off;
     }
 
     public void OnClickStart()
     {
+        Debug.Log("Entrando a OnClickStart");
+
         string username = nameInput.text.Trim();
         string email = emailInput.text.Trim();
 
-        // 1. Validación de campos vacíos
+        Debug.Log("Usuario: " + username);
+        Debug.Log("Email: " + email);
+        Debug.Log("Faccion: " + selectedFaction);
+
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email))
-        {
-            ShowError("ERROR: Credenciales incompletas.");
-            return;
-        }
+        { ShowError("ERROR: Credenciales incompletas."); Debug.Log("Falló: campos vacíos"); return; }
 
-        // 2. Validación de Email (Ingeniería de Software básica)
         if (!IsValidEmail(email))
-        {
-            ShowError("ERROR: Enlace de comunicación no válido.");
-            return;
-        }
+        { ShowError("ERROR: Email no válido."); Debug.Log("Falló: email inválido"); return; }
 
-        // 3. Guardado Pro con PlayerPrefs
-        PlayerPrefs.SetString("UserName", username);
-        PlayerPrefs.SetString("UserEmail", email);
-        PlayerPrefs.SetString("UserFaction", factionDropdown.options[factionDropdown.value].text);
-        PlayerPrefs.SetInt("CurrentMission", 1); // Empezamos en la 1/6
-        PlayerPrefs.SetInt("TotalPoints", 0);
-        PlayerPrefs.Save();
+        if (string.IsNullOrEmpty(selectedFaction))
+        { ShowError("ERROR: Elige una facción."); Debug.Log("Falló: sin facción"); return; }
 
-        // 4. Transición Estética
-        StartCoroutine(TransitionSequence());
+        Debug.Log("Cambiando panel...");
+        panelLogin.SetActive(false);
+        panelTutorial.SetActive(true);
+        Debug.Log("Listo");
     }
 
     private bool IsValidEmail(string email)
-    {
-        return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-    }
+    { return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"); }
 
     private void ShowError(string msg)
-    {
-        errorText.text = msg;
-        // Opcional: Podrías añadir un efecto de sonido de error aquí
-    }
+    { errorText.text = msg; }
 
     System.Collections.IEnumerator TransitionSequence()
     {
-        // Aquí podrías poner una animación de carga o un sonido de "Acceso Concedido"
+        Debug.Log("Transición iniciada");
         yield return new WaitForSeconds(0.5f);
+        Debug.Log("Desactivando login, activando tutorial");
         panelLogin.SetActive(false);
         panelTutorial.SetActive(true);
+        Debug.Log("Listo");
+    }
+
+    public void TestBoton()
+    {
+        Debug.Log("TEST FUNCIONANDO");
     }
 }
