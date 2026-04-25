@@ -73,7 +73,7 @@ public class MultiImageTracker : MonoBehaviour
             trackedImageManager.trackablesChanged.RemoveListener(OnChanged);
     }
 
-    void OnChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
+    public void OnChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
     {
         foreach (var newImage in eventArgs.added)
         {
