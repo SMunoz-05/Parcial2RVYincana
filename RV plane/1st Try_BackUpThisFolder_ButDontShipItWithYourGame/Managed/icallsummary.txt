@@ -327,6 +327,7 @@ UnityEngine.Audio.ScriptableProcessorBindings::CheckProcessorExistsInternal_Inje
 UnityEngine.AudioSettings::StartAudioOutput
 UnityEngine.AudioSettings::StopAudioOutput
 UnityEngine.AudioSource::PlayHelper_Injected
+UnityEngine.AudioSource::PlayOneShotHelper_Injected
 UnityEngine.Awaitable::IsNativeAwaitableCompleted
 UnityEngine.Awaitable::CancelNativeAwaitable
 UnityEngine.Awaitable::ReleaseNativeAwaitable

@@ -37,6 +37,7 @@
           {
             "name": "AnimationClip",
             "scenes": [
+              "Assets/Scenes/Escena_Ranking.unity",
               "Assets/Scenes/Yincana.unity"
             ],
             "dependencyType": 0,
@@ -45,6 +46,7 @@
           {
             "name": "Animator",
             "scenes": [
+              "Assets/Scenes/Escena_Ranking.unity",
               "Assets/Scenes/Yincana.unity"
             ],
             "dependencyType": 0,
@@ -53,6 +55,7 @@
           {
             "name": "AnimatorController",
             "scenes": [
+              "Assets/Scenes/Escena_Ranking.unity",
               "Assets/Scenes/Yincana.unity"
             ],
             "dependencyType": 1,
@@ -61,6 +64,14 @@
           {
             "name": "AnimatorOverrideController",
             "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Avatar",
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -475,6 +486,14 @@
             "name": "ShaderNameRegistry",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "SkinnedMeshRenderer",
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1773,6 +1792,7 @@
           {
             "name": "VideoPlayer",
             "scenes": [
+              "Assets/Scenes/Escena_Ranking.unity",
               "Assets/Scenes/Yincana.unity"
             ],
             "dependencyType": 0,

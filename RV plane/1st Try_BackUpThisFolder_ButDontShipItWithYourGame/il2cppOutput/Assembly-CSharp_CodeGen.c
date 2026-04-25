@@ -43,6 +43,15 @@ extern void MobileTouchActions_AddCallbacks_m3A2D37F0FF4CD4327E4616944DCD3054319
 extern void MobileTouchActions_UnregisterCallbacks_mC8B777832A6A9D6E4050D8DB5A1FC6363FE75911 (void);
 extern void MobileTouchActions_RemoveCallbacks_mCB036276A534070B1C104DA1535CD918CD293E5F (void);
 extern void MobileTouchActions_SetCallbacks_m86D1A8309062BFE4D2071312402F9CF3234B0A0D (void);
+extern void ChestOpener_Start_m92ABE724EF52D8FCD4C8D279EF14D9BF5DBD2816 (void);
+extern void ChestOpener_SecuenciaApertura_mCC9E7B8259E976C7EFC0B1E3847367069DA6EB99 (void);
+extern void ChestOpener__ctor_m93C646A6C2BB095C5E664ADAC91A6313DA2CC678 (void);
+extern void U3CSecuenciaAperturaU3Ed__4__ctor_mC70B1F6E845A7953C25B0D52A8B3C0CBA31A882F (void);
+extern void U3CSecuenciaAperturaU3Ed__4_System_IDisposable_Dispose_m8C3BCD501C2DB5BA1331B9C7E4B2B3DEFCAB05DC (void);
+extern void U3CSecuenciaAperturaU3Ed__4_MoveNext_m66C71D6DC36EEA3AF41239681DB154B043A3DF8D (void);
+extern void U3CSecuenciaAperturaU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9B0F3A66DA685407BBB8B0D92CA05FFB868EE21A (void);
+extern void U3CSecuenciaAperturaU3Ed__4_System_Collections_IEnumerator_Reset_m1508B3E311870B7C944E4BBAC61F8D40FD11BE45 (void);
+extern void U3CSecuenciaAperturaU3Ed__4_System_Collections_IEnumerator_get_Current_mD04B24E1B46599B6EF03212D0F50F4532BBF102E (void);
 extern void ImageTrackingController_Awake_m8E85656064144E56642FF169C732C7E88DF67266 (void);
 extern void ImageTrackingController_OnEnable_m375A41071E9C728C31B49EEE663DB24DA177EAC1 (void);
 extern void ImageTrackingController_OnDisable_m2085D7373A4BC2EEA45707CD3685A6D254B07F62 (void);
@@ -72,8 +81,8 @@ extern void QuizManager_FinalizarJuego_mDFB32F0100B73D325FC61E2E6440F89780EE8EDA
 extern void QuizManager_ActualizarPuntosUI_m0EE8FD5AF3FA6E3CE803E75517A208A020AA5ABD (void);
 extern void QuizManager_IrAlRanking_m7A67201930422673A9CBEE2457E5091DA3A4D8A9 (void);
 extern void QuizManager__ctor_mA45557C58A22862C051B34927E006C44F65A3E60 (void);
-extern void U3CU3Ec__DisplayClass18_0__ctor_m139493CB165EE3058A275CD589738A4C0B351DC1 (void);
-extern void U3CU3Ec__DisplayClass18_0_U3CMostrarSiguientePreguntaU3Eb__0_m8193FA6C8137C57B1F191E9A8BB789E952DF0799 (void);
+extern void U3CU3Ec__DisplayClass22_0__ctor_m4090DC0F94C244BB3421A1DB4ADADF8F5EEDD1C8 (void);
+extern void U3CU3Ec__DisplayClass22_0_U3CMostrarSiguientePreguntaU3Eb__0_m2A20B8EDEA081B65D353959D35722C2AA9B50675 (void);
 extern void RankingManager_Start_m83DA87BD7CCF1A2A28057B34809406DE8E63AF6E (void);
 extern void RankingManager_GuardarPuntajeActual_m061AD91665ECB6314015A88266F01841D6B65845 (void);
 extern void RankingManager_MostrarRanking_m2A7D17B0864E665E13E5E3408ED889A10B1D560A (void);
@@ -152,7 +161,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[146] = 
+static Il2CppMethodPointer s_methodPointers[155] = 
 {
 	InputHandler_add_OnTap_mA22DD09E85ABC6C01FF54BCA7ACDE3BBBA2C0A1A,
 	InputHandler_remove_OnTap_m9A4605BD1AD4E17067CEF54A20CDA760245D4D0B,
@@ -191,6 +200,15 @@ static Il2CppMethodPointer s_methodPointers[146] =
 	MobileTouchActions_RemoveCallbacks_mCB036276A534070B1C104DA1535CD918CD293E5F,
 	MobileTouchActions_SetCallbacks_m86D1A8309062BFE4D2071312402F9CF3234B0A0D,
 	NULL,
+	ChestOpener_Start_m92ABE724EF52D8FCD4C8D279EF14D9BF5DBD2816,
+	ChestOpener_SecuenciaApertura_mCC9E7B8259E976C7EFC0B1E3847367069DA6EB99,
+	ChestOpener__ctor_m93C646A6C2BB095C5E664ADAC91A6313DA2CC678,
+	U3CSecuenciaAperturaU3Ed__4__ctor_mC70B1F6E845A7953C25B0D52A8B3C0CBA31A882F,
+	U3CSecuenciaAperturaU3Ed__4_System_IDisposable_Dispose_m8C3BCD501C2DB5BA1331B9C7E4B2B3DEFCAB05DC,
+	U3CSecuenciaAperturaU3Ed__4_MoveNext_m66C71D6DC36EEA3AF41239681DB154B043A3DF8D,
+	U3CSecuenciaAperturaU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9B0F3A66DA685407BBB8B0D92CA05FFB868EE21A,
+	U3CSecuenciaAperturaU3Ed__4_System_Collections_IEnumerator_Reset_m1508B3E311870B7C944E4BBAC61F8D40FD11BE45,
+	U3CSecuenciaAperturaU3Ed__4_System_Collections_IEnumerator_get_Current_mD04B24E1B46599B6EF03212D0F50F4532BBF102E,
 	ImageTrackingController_Awake_m8E85656064144E56642FF169C732C7E88DF67266,
 	ImageTrackingController_OnEnable_m375A41071E9C728C31B49EEE663DB24DA177EAC1,
 	ImageTrackingController_OnDisable_m2085D7373A4BC2EEA45707CD3685A6D254B07F62,
@@ -220,8 +238,8 @@ static Il2CppMethodPointer s_methodPointers[146] =
 	QuizManager_ActualizarPuntosUI_m0EE8FD5AF3FA6E3CE803E75517A208A020AA5ABD,
 	QuizManager_IrAlRanking_m7A67201930422673A9CBEE2457E5091DA3A4D8A9,
 	QuizManager__ctor_mA45557C58A22862C051B34927E006C44F65A3E60,
-	U3CU3Ec__DisplayClass18_0__ctor_m139493CB165EE3058A275CD589738A4C0B351DC1,
-	U3CU3Ec__DisplayClass18_0_U3CMostrarSiguientePreguntaU3Eb__0_m8193FA6C8137C57B1F191E9A8BB789E952DF0799,
+	U3CU3Ec__DisplayClass22_0__ctor_m4090DC0F94C244BB3421A1DB4ADADF8F5EEDD1C8,
+	U3CU3Ec__DisplayClass22_0_U3CMostrarSiguientePreguntaU3Eb__0_m2A20B8EDEA081B65D353959D35722C2AA9B50675,
 	RankingManager_Start_m83DA87BD7CCF1A2A28057B34809406DE8E63AF6E,
 	RankingManager_GuardarPuntajeActual_m061AD91665ECB6314015A88266F01841D6B65845,
 	RankingManager_MostrarRanking_m2A7D17B0864E665E13E5E3408ED889A10B1D560A,
@@ -324,7 +342,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[10] =
 	{ 0x06000023, MobileTouchActions_RemoveCallbacks_mCB036276A534070B1C104DA1535CD918CD293E5F_AdjustorThunk },
 	{ 0x06000024, MobileTouchActions_SetCallbacks_m86D1A8309062BFE4D2071312402F9CF3234B0A0D_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[146] = 
+static const int32_t s_InvokerIndices[155] = 
 {
 	26761,
 	26761,
@@ -363,6 +381,15 @@ static const int32_t s_InvokerIndices[146] =
 	12417,
 	12417,
 	-1,
+	16342,
+	16127,
+	16342,
+	12348,
+	16342,
+	15922,
+	16127,
+	16342,
+	16127,
 	16342,
 	16342,
 	16342,
@@ -477,7 +504,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	146,
+	155,
 	s_methodPointers,
 	10,
 	s_adjustorThunks,

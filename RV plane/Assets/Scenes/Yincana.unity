@@ -7247,7 +7247,7 @@ MonoBehaviour:
   navesPrefabs:
   - {fileID: 3967355933023339721, guid: 7690d975c6a7fff49af4434141d86eee, type: 3}
   imageBindings: []
-  detectionAnimationPrefab: {fileID: 6590580691884929924, guid: ca9858a4c869c9a50bfcbda5808facee, type: 3}
+  detectionAnimationPrefab: {fileID: 7666582258082673087, guid: 7d0d2d8f4983f70e685a681eb09ba4bb, type: 3}
   animationDuration: 2
   animationLocalOffset: {x: 0, y: 0.1, z: 0}
 --- !u!1 &1940276840
