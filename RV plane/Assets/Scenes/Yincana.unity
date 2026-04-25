@@ -4070,6 +4070,126 @@ MonoBehaviour:
     - 'Carrera de pods '
     - Carrera de swoops
     respuestaCorrectaIndex: 2
+  - idTarjeta: BRAVO
+    pregunta: "\xBFEn qu\xE9 planeta se crea el ej\xE9rcito clon?"
+    opciones:
+    - 'Naboo '
+    - Coruscant
+    - 'Kamino '
+    - Geonosis
+    respuestaCorrectaIndex: 2
+  - idTarjeta: BRAVO
+    pregunta: "\xBFQu\xE9 pierde Anakin en su batalla con el Conde Dooku?"
+    opciones:
+    - 'Su brazo derecho '
+    - Su brazo izquierdo
+    - Su sable de luz
+    - Su nave
+    respuestaCorrectaIndex: 0
+  - idTarjeta: BRAVO
+    pregunta: "\xBFCon qui\xE9n se casa Anakin en secreto?"
+    opciones:
+    - 'Ahsoka '
+    - "Padm\xE9 Amidala"
+    - "Padm\xE9 Amidala"
+    - Shmi
+    respuestaCorrectaIndex: 2
+  - idTarjeta: CHARLIE
+    pregunta: "\xBFQu\xE9 nombre recibe Anakin al convertirse al lado oscuro?"
+    opciones:
+    - Darth Maul
+    - Darth Tyranus
+    - Darth Bane
+    - Darth Vader
+    respuestaCorrectaIndex: 3
+  - idTarjeta: CHARLIE
+    pregunta: "\xBFEn qu\xE9 planeta pelean Obi-Wan y Anakin su batalla final?"
+    opciones:
+    - Mustafar
+    - Tatooine
+    - Coruscant
+    - Utapau
+    respuestaCorrectaIndex: 3
+  - idTarjeta: CHARLIE
+    pregunta: "\xBFQui\xE9n se queda con Luke Skywalker al nacer?"
+    opciones:
+    - Obi-Wan Kenobi
+    - Yoda
+    - Owen y Beru Lars
+    - Bail Organa
+    respuestaCorrectaIndex: 2
+  - idTarjeta: DELTA
+    pregunta: "\xBFQu\xE9 planeta destruye la Estrella de la Muerte?"
+    opciones:
+    - Alderaan
+    - Tatooine
+    - Naboo
+    - Coruscant
+    respuestaCorrectaIndex: 0
+  - idTarjeta: DELTA
+    pregunta: "\xBFQui\xE9n es el piloto que destruye la Estrella de la Muerte?"
+    opciones:
+    - Han Solo
+    - Luke Skywalker
+    - Wedge Antilles
+    - Biggs Darklighter
+    respuestaCorrectaIndex: 1
+  - idTarjeta: DELTA
+    pregunta: "\xBFQu\xE9 droide lleva los planos de la Estrella de la Muerte?"
+    opciones:
+    - C-3PO
+    - R2-D2
+    - BB-8
+    - K-2SO
+    respuestaCorrectaIndex: 1
+  - idTarjeta: ECHO
+    pregunta: "\xBFQu\xE9 revela Darth Vader a Luke en su duelo?"
+    opciones:
+    - Que Leia es su hermana
+    - "Que Obi-Wan minti\xF3"
+    - Que es su padre
+    - "Que el Emperador lo cre\xF3"
+    respuestaCorrectaIndex: 2
+  - idTarjeta: ECHO
+    pregunta: "\xBFEn qu\xE9 planeta entrena Luke con el Maestro Yoda?"
+    opciones:
+    - Tatooine
+    - Endor
+    - Dagobah
+    - Hoth
+    respuestaCorrectaIndex: 2
+  - idTarjeta: ECHO
+    pregunta: "\xBFQui\xE9n congela a Han Solo en carbonita?"
+    opciones:
+    - El Emperador
+    - Darth Vader
+    - Jabba the Hutt
+    - Boba Fett
+    respuestaCorrectaIndex: 1
+  - idTarjeta: FOXTROT
+    pregunta: "\xBFQu\xE9 le revela Luke a Leia sobre su parentesco?"
+    opciones:
+    - Que son primos
+    - Que son hermanos
+    - Que Vader es su padre
+    - Que son Jedi
+    respuestaCorrectaIndex: 1
+  - idTarjeta: FOXTROT
+    pregunta: "\xBFQui\xE9n mata finalmente al Emperador Palpatine?"
+    opciones:
+    - Luke Skywalker
+    - Darth Vader
+    - Han Solo
+    - Lando Calrissian
+    respuestaCorrectaIndex: 1
+  - idTarjeta: FOXTROT
+    pregunta: "\xBFQu\xE9 criaturas ayudan a la Alianza Rebelde en Endor?"
+    opciones:
+    - Gungans
+    - Wookiees
+    - Ewoks
+    - Jawas
+    respuestaCorrectaIndex: 2
   panelQuiz: {fileID: 1275886030}
   textoPregunta: {fileID: 836461671}
   botonesOpciones:
@@ -4079,7 +4199,7 @@ MonoBehaviour:
   - {fileID: 2066402027}
   textoPuntos: {fileID: 1407534057}
   tarjetasCompletadas: 0
-  totalTarjetas: 1
+  totalTarjetas: 6
   botonFinalizar: {fileID: 2039303037}
   panelHUD_AR: {fileID: 1422688445}
   panelTutorial: {fileID: 1790270521}
