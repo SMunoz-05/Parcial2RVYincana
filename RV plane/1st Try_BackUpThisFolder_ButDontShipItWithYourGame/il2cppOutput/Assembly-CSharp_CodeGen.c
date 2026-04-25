@@ -52,7 +52,16 @@ extern void MultiImageTracker_Awake_m02E69BB030118771DD3108C35860EACD48EC19D7 (v
 extern void MultiImageTracker_OnEnable_m3D77D8175F343F53813DC6AC12C6B2F0C0843D6A (void);
 extern void MultiImageTracker_OnDisable_m2E26E6450E5B3838395DEE62C48D2D2771C83A62 (void);
 extern void MultiImageTracker_OnChanged_mB3A6E59BDF492D67E4D116410B9A9675EE88A370 (void);
+extern void MultiImageTracker_HandleTrackedImage_mBD40DEC4B978E21305616C979D9C3536D3D0B0B9 (void);
+extern void MultiImageTracker_PlayAnimationThenShowQuiz_m0F97797F040772257FC873F20924668888322B65 (void);
 extern void MultiImageTracker__ctor_mF76F641D6915828F59E772133A68BF82386F720C (void);
+extern void ImagePrefabBinding__ctor_m0820EB4694BB63E1254083401E65DB7A96F1874D (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16__ctor_m57C832BB7D9C80EAA9A330A4BFEB9C7EF28F30D2 (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16_System_IDisposable_Dispose_mCB1F0A9FB01910B72EA3552338EB851514CA1C4A (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16_MoveNext_m9112BC1AB4643BAFF6116BBDD27F00DA14C8FBD9 (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m834A8FF212EE3FA03779C607E88D8C184174F15E (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_IEnumerator_Reset_m19A4435128FF64A20CEC0CBB5C1C4A02987C131E (void);
+extern void U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_IEnumerator_get_Current_mAFF92C3134AE0C2EAEE3E46A316079A950A01FC0 (void);
 extern void QuizData__ctor_m1767023BA8B3C0283F79444DBB9ADB4853244B90 (void);
 extern void QuizManager_Awake_mA89631F4E346FB4202673C50CE8266926B616700 (void);
 extern void QuizManager_Start_m1ADF34E2DB7630CA7D7F666B4C450B17B34293B7 (void);
@@ -143,7 +152,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[137] = 
+static Il2CppMethodPointer s_methodPointers[146] = 
 {
 	InputHandler_add_OnTap_mA22DD09E85ABC6C01FF54BCA7ACDE3BBBA2C0A1A,
 	InputHandler_remove_OnTap_m9A4605BD1AD4E17067CEF54A20CDA760245D4D0B,
@@ -191,7 +200,16 @@ static Il2CppMethodPointer s_methodPointers[137] =
 	MultiImageTracker_OnEnable_m3D77D8175F343F53813DC6AC12C6B2F0C0843D6A,
 	MultiImageTracker_OnDisable_m2E26E6450E5B3838395DEE62C48D2D2771C83A62,
 	MultiImageTracker_OnChanged_mB3A6E59BDF492D67E4D116410B9A9675EE88A370,
+	MultiImageTracker_HandleTrackedImage_mBD40DEC4B978E21305616C979D9C3536D3D0B0B9,
+	MultiImageTracker_PlayAnimationThenShowQuiz_m0F97797F040772257FC873F20924668888322B65,
 	MultiImageTracker__ctor_mF76F641D6915828F59E772133A68BF82386F720C,
+	ImagePrefabBinding__ctor_m0820EB4694BB63E1254083401E65DB7A96F1874D,
+	U3CPlayAnimationThenShowQuizU3Ed__16__ctor_m57C832BB7D9C80EAA9A330A4BFEB9C7EF28F30D2,
+	U3CPlayAnimationThenShowQuizU3Ed__16_System_IDisposable_Dispose_mCB1F0A9FB01910B72EA3552338EB851514CA1C4A,
+	U3CPlayAnimationThenShowQuizU3Ed__16_MoveNext_m9112BC1AB4643BAFF6116BBDD27F00DA14C8FBD9,
+	U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m834A8FF212EE3FA03779C607E88D8C184174F15E,
+	U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_IEnumerator_Reset_m19A4435128FF64A20CEC0CBB5C1C4A02987C131E,
+	U3CPlayAnimationThenShowQuizU3Ed__16_System_Collections_IEnumerator_get_Current_mAFF92C3134AE0C2EAEE3E46A316079A950A01FC0,
 	QuizData__ctor_m1767023BA8B3C0283F79444DBB9ADB4853244B90,
 	QuizManager_Awake_mA89631F4E346FB4202673C50CE8266926B616700,
 	QuizManager_Start_m1ADF34E2DB7630CA7D7F666B4C450B17B34293B7,
@@ -306,7 +324,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[10] =
 	{ 0x06000023, MobileTouchActions_RemoveCallbacks_mCB036276A534070B1C104DA1535CD918CD293E5F_AdjustorThunk },
 	{ 0x06000024, MobileTouchActions_SetCallbacks_m86D1A8309062BFE4D2071312402F9CF3234B0A0D_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[137] = 
+static const int32_t s_InvokerIndices[146] = 
 {
 	26761,
 	26761,
@@ -354,7 +372,16 @@ static const int32_t s_InvokerIndices[137] =
 	16342,
 	16342,
 	11043,
+	12417,
+	4630,
 	16342,
+	16342,
+	12348,
+	16342,
+	15922,
+	16127,
+	16342,
+	16127,
 	16342,
 	16342,
 	16342,
@@ -450,7 +477,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	137,
+	146,
 	s_methodPointers,
 	10,
 	s_adjustorThunks,

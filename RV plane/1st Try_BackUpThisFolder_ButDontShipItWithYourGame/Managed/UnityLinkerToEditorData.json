@@ -35,14 +35,26 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           },
@@ -50,6 +62,12 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -535,6 +553,14 @@
             "icon": null
           },
           {
+            "name": "TrailRenderer",
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Transform",
             "scenes": [],
             "dependencyType": 1,
@@ -992,13 +1018,17 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Yincana.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }
